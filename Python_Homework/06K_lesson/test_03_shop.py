@@ -41,4 +41,3 @@ def test_shop_purchase():
     assert "$58.29" in total_text, f"Итоговая сумма не равна $58.29, а равна {total_text}"
 
     driver.quit()
-    

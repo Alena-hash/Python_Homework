@@ -24,4 +24,3 @@ def test_slow_calculator():
 
     assert driver.find_element(By.CLASS_NAME, "screen").text == "15"
     driver.quit()
-    
