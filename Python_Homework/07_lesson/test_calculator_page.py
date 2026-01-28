@@ -22,6 +22,7 @@ def test_calculator():
     wait.until(EC.text_to_be_present_in_element((By.CLASS_NAME, "screen"), "15"))
 
     result = page.get_result()
+
     assert result == "15"
 
     driver.quit()
