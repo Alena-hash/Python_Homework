@@ -205,3 +205,17 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Python bytecode (технический мусор)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Окружения (если есть)
+venv/
+.env
+
+# Папки IDE
+.vscode/
+.idea/
+
