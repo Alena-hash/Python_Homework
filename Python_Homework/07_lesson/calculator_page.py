@@ -7,7 +7,8 @@ class CalculatorPage:
 
     def set_delay(self, seconds):
         self.driver.find_element(By.CSS_SELECTOR, "#delay").clear()
-        self.driver.find_element(By.CSS_SELECTOR, "#delay").send_keys(str(seconds))
+        self.driver.find_element(By.CSS_SELECTOR, "#delay"
+                                 ).send_keys(str(seconds))
 
     def click_button(self, text):
         self.driver.find_element(By.XPATH, f"//span[text()='{text}']").click()

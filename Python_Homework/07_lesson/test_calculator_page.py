@@ -1,4 +1,3 @@
-import pytest
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -10,7 +9,9 @@ def test_calculator():
     driver = webdriver.Chrome()
     page = CalculatorPage(driver)
 
-    driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
+    driver.get(
+        "https://bonigarcia.dev/selenium-webdriver-java/"
+        "slow-calculator.html")
 
     page.set_delay(45)
     page.click_button("7")
@@ -19,7 +20,12 @@ def test_calculator():
     page.click_button("=")
 
     wait = WebDriverWait(driver, 50)
-    wait.until(EC.text_to_be_present_in_element((By.CLASS_NAME, "screen"), "15"))
+    wait.until(
+        EC.text_to_be_present_in_element(
+            (By.CLASS_NAME, "screen"),
+            "15"
+        )
+            )
 
     result = page.get_result()
 

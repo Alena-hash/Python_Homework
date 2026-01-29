@@ -1,4 +1,3 @@
-import pytest
 from selenium import webdriver
 from login_page import LoginPage
 from main_page import MainPage
@@ -31,6 +30,9 @@ def test_shop_purchase():
     checkout_page.enter_postal_code("123456")
     checkout_page.click_finish()
     total_text = checkout_page.get_total()
-    assert "$58.29" in total_text, f"Итоговая сумма не равна $58.29, а равна {total_text}"
+    assert "$58.29" in total_text, (
+       f"Итоговая сумма не равна $58.29,"
+       f"а равна {total_text}"
+    )
 
     driver.quit()
